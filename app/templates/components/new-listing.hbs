@@ -1,0 +1,19 @@
+<div class="new-listing">
+  <h2>New Listing</h2>
+
+  <form>
+    <label for="title">Title:</label>
+    {{input id="title"}}
+
+    <label for="price">Price:</label>
+    {{input id="price"}}
+
+    <label for="contact">Contact Info:</label>
+    {{input id="contact"}}
+
+    <label for="date">Date:</label>
+    {{input id="date"}}
+
+    <button type="button" name="button" class="btn btn-primary" {{action "addListing"}}>Add Listing</button>
+  </form>
+</div>
