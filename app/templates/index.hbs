@@ -1,1 +1,10 @@
-{{new-listing}}
+<div class="col-md-8 col-md-offset-2">
+  <h1>Current Listings</h1>
+
+  {{#each model as |listing|}}
+    {{listing-tile listing=listing}}
+  {{/each}}
+
+  {{new-listing listing=model addListing="addListing"}}
+
+</div>

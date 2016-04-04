@@ -1,0 +1,27 @@
+<hr>
+{{#if editListing}}
+<div class="edit-listing">
+  <h2>Update Listing</h2>
+
+  <form>
+    <label for="title">Title:</label>
+    {{input value=title id="title" placeholder=listing.title}}
+
+    <label for="price">Price:</label>
+    {{input value=price id="price" placeholder=listing.price}}
+
+    <label for="contact">Contact Info:</label>
+    {{input value=contact id="contact" placeholder=listing.contact}}
+
+    <label for="date">Date:</label>
+    {{input value=date id="date" placeholder=listing.date}}<br>
+
+    <label for="body">Body Text:</label>
+    {{textarea value=body id="body" placeholder=listing.body}}
+
+    <button type="button" name="button" class="btn btn-primary" {{action "updateListing"}}>Edit Listing</button>
+  </form>
+</div>
+{{else}}
+  <button type="button" class="btn btn-primary" {{action "editListingShow"}}>Update Listing</button>
+{{/if}}

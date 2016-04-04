@@ -1,19 +1,27 @@
+<hr>
+{{#if newListing}}
 <div class="new-listing">
   <h2>New Listing</h2>
 
   <form>
     <label for="title">Title:</label>
-    {{input id="title"}}
+    {{input value=title id="title"}}
 
     <label for="price">Price:</label>
-    {{input id="price"}}
+    {{input value=price id="price"}}
 
     <label for="contact">Contact Info:</label>
-    {{input id="contact"}}
+    {{input value=contact id="contact"}}
 
     <label for="date">Date:</label>
-    {{input id="date"}}
+    {{input value=date id="date"}}<br>
+
+    <label for="body">Body Text:</label>
+    {{textarea value=body id="body"}}
 
     <button type="button" name="button" class="btn btn-primary" {{action "addListing"}}>Add Listing</button>
   </form>
 </div>
+{{else}}
+  <button type="button" class="btn btn-primary" {{action "newListingShow"}}>Create New Listing</button>
+{{/if}}

@@ -1,12 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  newListing: false,
+  editListing: false,
+
   actions: {
-    newListingShow() {
-      this.set('newListing', true);
+    editListingShow() {
+      this.set('editListing', true);
     },
-    addListing() {
+    updateListing(listing) {
       var params = {
         title: this.get('title'),
         price: this.get('price'),
@@ -15,8 +16,8 @@ export default Ember.Component.extend({
         body: this.get('body')
           // category: this.get('category')
       };
-      this.set('newListing', false);
-      this.sendAction('addListing', params);
+      this.set('editListing', false);
+      this.sendAction('updateListing', listing, params);
     }
   }
 });
