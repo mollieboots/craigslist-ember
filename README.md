@@ -1,7 +1,8 @@
 # Craigslist
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Our recreation of craigslist!
+
+## By Mollie Bootsma and Veronica Alley
 
 ## Prerequisites
 
